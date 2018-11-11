@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Intersect Hearthstone</string>
+    <string name="splash_screen">Splash Screen</string>
+    <string name="date">Current Date</string>
+    <string name="author_name">Chintan Shah</string>
+    <string name="hearthstone_icon_description">Hearthstone Icon</string>
 </resources>
