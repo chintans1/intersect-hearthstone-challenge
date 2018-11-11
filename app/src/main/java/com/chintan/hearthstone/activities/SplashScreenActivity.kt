@@ -21,14 +21,12 @@ class SplashScreenActivity : AppCompatActivity() {
         val simpleDateFormatter = SimpleDateFormat("MMMM dd, YYYY", Locale.getDefault())
         current_date.text = simpleDateFormatter.format(Date())
 
-
         // TODO: Wait until all the cards are loaded (API request is successful) and then go to the MainActivity
-        // For now, we just wait few seconds and then move onto the MainActivity
+        // For now, we just wait a couple seconds and then start the MainActivity
         val startMainActivity = Runnable {
             startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
-
         Handler().postDelayed(startMainActivity, splashScreenDelay)
     }
 }
