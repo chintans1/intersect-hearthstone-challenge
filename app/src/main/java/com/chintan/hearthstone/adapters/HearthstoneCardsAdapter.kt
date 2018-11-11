@@ -10,8 +10,8 @@ import com.chintan.hearthstone.R
 import com.chintan.hearthstone.models.HearthstoneCard
 import kotlinx.android.synthetic.main.hearthstone_card.view.*
 
-class HearthstoneCardAdapter(private val hearthstoneCards: List<HearthstoneCard>) :
-    RecyclerView.Adapter<HearthstoneCardAdapter.ViewHolder>() {
+class HearthstoneCardsAdapter(private val hearthstoneCards: List<HearthstoneCard>) :
+    RecyclerView.Adapter<HearthstoneCardsAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val cardImage = itemView.hearthstone_card_image as ImageView
