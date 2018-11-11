@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.chintan.hearthstone.R
 import com.chintan.hearthstone.models.HearthstoneCard
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.hearthstone_card.view.*
 
 class HearthstoneCardsAdapter(private val hearthstoneCards: List<HearthstoneCard>) :
@@ -32,6 +33,18 @@ class HearthstoneCardsAdapter(private val hearthstoneCards: List<HearthstoneCard
         viewHolder.cardName.text = card.name
         viewHolder.cardType.text = card.type
         viewHolder.cardPlayerClass.text = card.playerClass
+
+        if (card.imageUrl.isEmpty()) {
+            viewHolder.cardImage.setImageResource(R.drawable.ic_hearthstone_card)
+        } else {
+            // No need to try to get the image if the imageUrl is empty anyways
+            // Also use default hearthstone cardback while grabbing the image or if it failed
+            Picasso.get()
+                .load(card.imageUrl)
+                .placeholder(R.drawable.ic_hearthstone_card)
+                .error(R.drawable.ic_hearthstone_card)
+                .into(viewHolder.cardImage)
+        }
     }
 
     override fun getItemCount(): Int {
