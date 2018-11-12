@@ -14,8 +14,8 @@
         <ImageView
             android:id="@+id/hearthstone_card_image"
             android:layout_width="match_parent"
-            android:layout_height="160dp"
-            android:scaleType="centerCrop"
+            android:layout_height="@dimen/card_image_height"
+            android:padding="@dimen/card_spacing"
             android:src="@drawable/ic_hearthstone_card"
             android:contentDescription="@string/hearthstone_card_description" />
 

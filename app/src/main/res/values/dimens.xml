@@ -6,4 +6,5 @@
 
     <dimen name="splash_screen_icon">150dp</dimen>
     <dimen name="card_spacing">8dp</dimen>
+    <dimen name="card_image_height">160dp</dimen>
 </resources>
