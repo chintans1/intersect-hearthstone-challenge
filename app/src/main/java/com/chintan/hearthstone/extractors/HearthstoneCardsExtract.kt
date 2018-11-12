@@ -32,7 +32,7 @@ class HearthstoneCardsExtract : Extract<HearthstoneCard> {
     }
 
     private fun convertToHearthstoneCards(allCardsJson: String): List<HearthstoneCard> {
-        val hearthstoneCards: MutableList<HearthstoneCard> = ArrayList()
+        val hearthstoneCards: MutableList<HearthstoneCard> = mutableListOf()
         val jsonObject = JSONObject(allCardsJson)
 
         jsonObject.keys().forEach { cardCategory ->
@@ -43,7 +43,7 @@ class HearthstoneCardsExtract : Extract<HearthstoneCard> {
     }
 
     private fun convertToHearthstoneCards(cardsArray: JSONArray): List<HearthstoneCard> {
-        val hearthstoneCards: MutableList<HearthstoneCard> = ArrayList()
+        val hearthstoneCards: MutableList<HearthstoneCard> = mutableListOf()
 
         for (i in 0 until cardsArray.length()) {
             hearthstoneCards.add(buildHearthstoneCard(cardsArray.getJSONObject(i)))

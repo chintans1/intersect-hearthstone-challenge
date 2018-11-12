@@ -6,5 +6,5 @@ interface Extract<T> {
      *
      * @return a list of POJOs where each object represents some object in the API response
      */
-    fun extract() : List<T>
+    fun extract(): List<T>
 }

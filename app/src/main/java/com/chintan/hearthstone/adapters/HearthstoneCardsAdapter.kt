@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.hearthstone_card.view.*
 class HearthstoneCardsAdapter(private val hearthstoneCards: List<HearthstoneCard>) :
     RecyclerView.Adapter<HearthstoneCardsAdapter.ViewHolder>() {
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         val cardImage = itemView.hearthstone_card_image as ImageView
         val cardName = itemView.hearthstone_card_name as TextView
         val cardType = itemView.hearthstone_card_type as TextView
