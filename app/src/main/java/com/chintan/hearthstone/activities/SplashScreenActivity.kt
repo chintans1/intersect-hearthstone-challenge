@@ -17,11 +17,9 @@ class SplashScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.splash_screen_activity)
 
-        // Set the current_date text to be today's date
         val simpleDateFormatter = SimpleDateFormat("MMMM dd, YYYY", Locale.getDefault())
         current_date.text = simpleDateFormatter.format(Date())
 
-        // TODO: Wait until all the cards are loaded (API request is successful) and then go to the MainActivity
         // For now, we just wait a couple seconds and then start the MainActivity
         val startMainActivity = Runnable {
             startActivity(Intent(this, MainActivity::class.java))

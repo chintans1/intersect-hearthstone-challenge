@@ -9,10 +9,23 @@
         android:id="@+id/hearthstone_cards_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbars="vertical"
         android:clipToPadding="false"
         android:paddingBottom="@dimen/card_spacing"
+        android:scrollbars="vertical"
+        android:visibility="gone"
         tools:layoutManager="android.support.v7.widget.GridLayoutManager"
         tools:listitem="@layout/hearthstone_card"
         tools:spanCount="2" />
+
+    <LinearLayout
+        android:id="@+id/progress_bar_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>
