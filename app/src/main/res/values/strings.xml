@@ -12,4 +12,5 @@
     <string name="card_type">Type</string>
     <string name="player_class">Player Class</string>
     <string name="hearthstone_card_description">Hearthstone card picture</string>
+    <string name="search">Search...</string>
 </resources>

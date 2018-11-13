@@ -12,6 +12,7 @@ class HearthstoneCardsExtract : Extract<HearthstoneCard> {
     // FIXME: hide key from plain sight in source code
     private val headers = Headers.Builder().add("X-Mashape-Key", "dSLmxAcwEJmshCQWvpoPPrrnSWF2p1fVyHljsn8MQDK2IH936l").build()
 
+    // NOTE: Maybe it should be a Set<HearthstoneCard> to avoid duplicates unless that is wanted behaviour?
     override fun extract(): List<HearthstoneCard> {
         val allCardsJson = getAllCardsFromAPI()
         return convertToHearthstoneCards(allCardsJson)
@@ -27,6 +28,7 @@ class HearthstoneCardsExtract : Extract<HearthstoneCard> {
             response.body()!!.close()
             return body
         } else {
+            // FIXME: Propagate this to the end user so they can know what went wrong
             throw RuntimeException("Failed to grab Hearthstone Cards from the API provider")
         }
     }
