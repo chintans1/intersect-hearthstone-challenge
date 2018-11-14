@@ -1,6 +1,9 @@
 # Hearthstone Cards
 This is a simple Android app built using Kotlin. It makes GET requests to this [API](https://market.mashape.com/omgvamp/hearthstone) and parses the JSON response to display all the Hearthstone cards in existence. It also allows users to filter through the cards by searching through the card names.
 
+### Install
+You can find the APK [here](hearthstone-cards.apk) and sideload it onto your Android device easily.
+
 ### Libraries Used
 - [OkHttp](https://github.com/square/okhttp) for making API requests
 - [Picasso](https://github.com/square/picasso) for grabbing the images for the Hearthstone cards
